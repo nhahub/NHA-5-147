@@ -1,0 +1,8 @@
+# Development and test tools. Includes everything from requirements.txt.
+# Install with: pip install -r requirements-dev.txt
+-r requirements.txt
+
+pytest>=8.0,<10.0
+# FastAPI's TestClient (from Starlette) sends requests through httpx2. The old
+# `httpx` package still works but makes Starlette emit a deprecation warning.
+httpx2>=2.0,<3.0
